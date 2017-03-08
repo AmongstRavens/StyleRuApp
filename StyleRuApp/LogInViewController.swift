@@ -31,6 +31,7 @@ class LogInViewController: UIViewController {
         var gradientLayer : CAGradientLayer!
 //        let startColor : CGColor = UIColor(red: 26, green: 186, blue: 190, alpha: 1).cgColor
 //        let endColor : CGColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1).cgColor
+//      comment for commit
         gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [UIColor.cyan.cgColor, UIColor.white.cgColor]
