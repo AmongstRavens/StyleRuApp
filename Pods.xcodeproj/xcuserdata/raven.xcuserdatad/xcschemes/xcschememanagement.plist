@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>OAStackView-OAStackView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OAStackView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-StyleRuApp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SWRevealViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>213030FDF5C3488F8367282BDD97BD0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36EB4E39F3BF080528CA5CA69ABA2350</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>78C41631A8E2574924D933081764A9AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A20B7EBE053FD14D283DA0966A3275D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
