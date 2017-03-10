@@ -11,6 +11,7 @@ import UIKit
 class SideBarViewController: UIViewController {
 
     
+    @IBOutlet weak var personImageButton: UIButton!
     @IBOutlet weak var headerStackViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var profileAvatarImageView: UIImageView!
     
@@ -19,18 +20,7 @@ class SideBarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileAvatarImageView.backgroundColor = UIColor.gray
-        profileAvatarImageView.image = #imageLiteral(resourceName: "Syl")
-        profileAvatarImageView.layer.cornerRadius = profileAvatarImageView.bounds.size.width / 2
-        profileAvatarImageView.clipsToBounds = true
-        
-        headerStackViewWidthConstraint.constant = screenWidth * 4/5 - 15
-        
-        veilView.frame = CGRect(x: 0, y: 0, width: self.revealViewController().rearViewController.view.bounds.size.width, height: self.revealViewController().rearViewController.view.bounds.size.height)
-        veilView.layer.isOpaque = true
-        veilView.backgroundColor = UIColor.black.withAlphaComponent(0)
-        veilView.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        veilView.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        initSettup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,6 +28,7 @@ class SideBarViewController: UIViewController {
         if self.revealViewController() != nil{
             self.revealViewController().frontViewController.view.addSubview(veilView)
         }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,5 +37,21 @@ class SideBarViewController: UIViewController {
         self.revealViewController().frontViewController.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
+    
+    private func initSettup(){
+        profileAvatarImageView.backgroundColor = UIColor.gray
+        profileAvatarImageView.layer.cornerRadius = profileAvatarImageView.bounds.size.width / 2
+        profileAvatarImageView.clipsToBounds = true
+        
+        headerStackViewWidthConstraint.constant = screenWidth * 4/5 - 25
+        
+        veilView.frame = CGRect(x: 0, y: 0, width: self.revealViewController().rearViewController.view.bounds.size.width, height: self.revealViewController().rearViewController.view.bounds.size.height)
+        veilView.layer.isOpaque = true
+        veilView.backgroundColor = UIColor.black.withAlphaComponent(0)
+        veilView.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        veilView.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
+
+    
 
 }

@@ -14,6 +14,10 @@
 		9714E5DE1E6F5A5400CA7F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9714E5DC1E6F5A5400CA7F77 /* Main.storyboard */; };
 		9714E5E01E6F5A5400CA7F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9714E5DF1E6F5A5400CA7F77 /* Assets.xcassets */; };
 		9714E5E31E6F5A5400CA7F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9714E5E11E6F5A5400CA7F77 /* LaunchScreen.storyboard */; };
+		976C45FD1E734D7B00880B62 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C45FC1E734D7B00880B62 /* extensions.swift */; };
+		976C46021E73525E00880B62 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C46011E73525E00880B62 /* EventsViewController.swift */; };
+		976C46051E735C0900880B62 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C46041E735C0900880B62 /* DirectionsViewController.swift */; };
+		976C46081E7363DA00880B62 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C46071E7363DA00880B62 /* MainCollectionViewCell.swift */; };
 		97F72B471E709E7300E526E2 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F72B461E709E7300E526E2 /* ProjectsViewController.swift */; };
 		97F72B491E70A10500E526E2 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F72B481E70A10500E526E2 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +32,10 @@
 		9714E5DF1E6F5A5400CA7F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9714E5E21E6F5A5400CA7F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9714E5E41E6F5A5400CA7F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		976C45FC1E734D7B00880B62 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		976C46011E73525E00880B62 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		976C46041E735C0900880B62 /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
+		976C46071E7363DA00880B62 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		97F72B461E709E7300E526E2 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		97F72B481E70A10500E526E2 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C14AD0153961707CAC8F6B6C /* Pods-StyleRuApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleRuApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleRuApp/Pods-StyleRuApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,17 +84,61 @@
 		9714E5D71E6F5A5400CA7F77 /* StyleRuApp */ = {
 			isa = PBXGroup;
 			children = (
-				9714E5D81E6F5A5400CA7F77 /* AppDelegate.swift */,
 				9714E5DC1E6F5A5400CA7F77 /* Main.storyboard */,
+				976C46061E735C1400880B62 /* DirectionsDirectory */,
 				97F72B481E70A10500E526E2 /* LogInViewController.swift */,
-				97F72B461E709E7300E526E2 /* ProjectsViewController.swift */,
-				970C45921E6F64870043C49B /* PersonProfileViewController.swift */,
 				970C45901E6F63130043C49B /* SideBarViewController.swift */,
+				976C46031E73526400880B62 /* EventsDirectory */,
+				976C45FF1E73523600880B62 /* ProjectsDirectory */,
+				976C46001E73524400880B62 /* PersonsDirectory */,
+				976C45FE1E73521C00880B62 /* Additionals */,
+			);
+			path = StyleRuApp;
+			sourceTree = "<group>";
+		};
+		976C45FE1E73521C00880B62 /* Additionals */ = {
+			isa = PBXGroup;
+			children = (
+				9714E5D81E6F5A5400CA7F77 /* AppDelegate.swift */,
+				976C45FC1E734D7B00880B62 /* extensions.swift */,
 				9714E5DF1E6F5A5400CA7F77 /* Assets.xcassets */,
 				9714E5E11E6F5A5400CA7F77 /* LaunchScreen.storyboard */,
 				9714E5E41E6F5A5400CA7F77 /* Info.plist */,
 			);
-			path = StyleRuApp;
+			name = Additionals;
+			sourceTree = "<group>";
+		};
+		976C45FF1E73523600880B62 /* ProjectsDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				97F72B461E709E7300E526E2 /* ProjectsViewController.swift */,
+			);
+			name = ProjectsDirectory;
+			sourceTree = "<group>";
+		};
+		976C46001E73524400880B62 /* PersonsDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				970C45921E6F64870043C49B /* PersonProfileViewController.swift */,
+			);
+			name = PersonsDirectory;
+			sourceTree = "<group>";
+		};
+		976C46031E73526400880B62 /* EventsDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				976C46011E73525E00880B62 /* EventsViewController.swift */,
+			);
+			name = EventsDirectory;
+			sourceTree = "<group>";
+		};
+		976C46061E735C1400880B62 /* DirectionsDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				976C46041E735C0900880B62 /* DirectionsViewController.swift */,
+				976C46071E7363DA00880B62 /* MainCollectionViewCell.swift */,
+			);
+			name = DirectionsDirectory;
 			sourceTree = "<group>";
 		};
 		FECE7C6992107A754DB20A91 /* Frameworks */ = {
@@ -222,10 +274,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9714E5D91E6F5A5400CA7F77 /* AppDelegate.swift in Sources */,
+				976C46081E7363DA00880B62 /* MainCollectionViewCell.swift in Sources */,
 				97F72B471E709E7300E526E2 /* ProjectsViewController.swift in Sources */,
 				970C45911E6F63130043C49B /* SideBarViewController.swift in Sources */,
 				97F72B491E70A10500E526E2 /* LogInViewController.swift in Sources */,
+				976C46051E735C0900880B62 /* DirectionsViewController.swift in Sources */,
+				976C46021E73525E00880B62 /* EventsViewController.swift in Sources */,
 				970C45931E6F64870043C49B /* PersonProfileViewController.swift in Sources */,
+				976C45FD1E734D7B00880B62 /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

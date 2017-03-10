@@ -1,15 +1,14 @@
 //
-//  PersonProfileViewController.swift
+//  DirectionsViewController.swift
 //  StyleRuApp
 //
-//  Created by Sergey on 3/8/17.
+//  Created by Sergey on 3/11/17.
 //  Copyright © 2017 Sergey. All rights reserved.
 //
 
 import UIKit
-import SWRevealViewController
 
-class PersonProfileViewController: UIViewController {
+class DirectionsViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     

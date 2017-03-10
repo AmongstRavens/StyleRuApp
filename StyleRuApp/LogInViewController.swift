@@ -8,34 +8,53 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
     
-    
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginTextFiled: UITextField!
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var enterButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainLabel.layer.zPosition = 2
-        enterButton.layer.zPosition = 2
+        initialSettup()
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createGradientLayer()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
 
     
     private func createGradientLayer() {
         var gradientLayer : CAGradientLayer!
-//        let startColor : CGColor = UIColor(red: 26, green: 186, blue: 190, alpha: 1).cgColor
-//        let endColor : CGColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1).cgColor
-//      comment for commit
+
         gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.cyan.cgColor, UIColor.white.cgColor]
+        gradientLayer.colors = [UIColor.gradientColor.cgColor, UIColor.white.cgColor]
         self.view.layer.addSublayer(gradientLayer)
+    }
+    
+    private func initialSettup(){
+        mainLabel.layer.zPosition = 2
+        mainLabel.sizeToFit()
+        enterButton.layer.zPosition = 2
+        passwordTextField.layer.zPosition = 2
+        loginTextFiled.layer.zPosition = 2
+        logoImageView.layer.zPosition = 2
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
 }
